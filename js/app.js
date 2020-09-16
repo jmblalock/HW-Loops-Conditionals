@@ -143,3 +143,70 @@ let alternateCase = function (s) {
 for (let i = 0; i < ninjaTurtles.length; i++) {
     console.log(alternateCase(ninjaTurtles[i]));
 }
+
+/*
+Return of the Closets
+Below, we've given you examples of Kristyn and Thom's closets modeled as data
+in JavaScript.Use this data to answer the following questions.
+
+Alien Attire
+1.  Kristyn's left shoe has traveled through time and space and turned up in 
+    Thom's accessories drawer! Remove Kristyn's shoe from the array and save 
+    it to the variable kristynsShoe. Use that variable to add Kristyn's lost 
+    shoe to Thom's accessories array.
+
+Dress 'em Up
+1.  Modify your code to put together 3 separate outfits for Kristyn and Thom.
+    Put the output in a sentence to tell us what we'll be wearing. Mix and 
+    match!
+*/
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "GA hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+];
+
+  // Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+];
+
+// 1. 
+const kristynsShoe = kristynsCloset.shift();
+thomsCloset[2].push(kristynsShoe);
+
+// 2. 
+console.log("Kristyn will be wearing " + kristynsCloset[0] + " and " +
+            kristynsCloset[2] + " to class!");
+console.log("Kristyn will be wearing " + kristynsCloset[1] + " and " +
+            kristynsCloset[3] + " to class!");
+console.log("Kristyn will be wearing " + kristynsCloset[2] + " and " +
+            kristynsCloset[4] + " to class!");
+
+console.log("Thom will be wearing a " + thomsCloset[0][0] + ", " +
+            thomsCloset[1][0] + " and " + thomsCloset[2][0] + " to class!");
+console.log("Thom will be wearing a " + thomsCloset[0][1] + ", " +
+            thomsCloset[1][1] + " and " + thomsCloset[2][1] + " to class!");
+console.log("Thom will be wearing a " + thomsCloset[0][2] + ", " +
+            thomsCloset[1][2] + " and " + thomsCloset[2][2] + " to class!");
